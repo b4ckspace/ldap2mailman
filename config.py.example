@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+"""Configuration for the ldap2mailman sync script."""
+
+LDAP_URI = 'ldap.example.com'
+LDAP_AUTH = ('cn=reader,dc=example', 'secure-password')
+LDAP_SEARCH = 'ou=member,dc=example'
+LDAP_SEARCH_FILTER = '(objectClass=exampleMember)'
+LDAP_NAME_ATTR = 'uid'
+LDAP_MAIL_ATTR = 'mlAddress'
+
+MLIST = 'internal@lists.example.com'
+WELCOME_TO = 'internal@lists.example.com'
+WELCOME_FROM = 'ceo@example.com'
+WELCOME_SUBJECT = 'Welcome'
+
+MAIL_SERVER = 'localhost'
+MAIL_BODY = """
+Hello {name},
+
+Welcome!
+""".strip()
