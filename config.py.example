@@ -7,8 +7,10 @@ LDAP_SEARCH = 'ou=member,dc=example'
 LDAP_SEARCH_FILTER = '(objectClass=exampleMember)'
 LDAP_NAME_ATTR = 'uid'
 LDAP_MAIL_ATTR = 'mlAddress'
+LDAP_UIDNUMBER_ATTR = 'uidNumber'
 
 MLIST = 'internal@lists.example.com'
+MORE_MLISTS = ['public@lists.example.com']
 WELCOME_TO = 'internal@lists.example.com'
 WELCOME_FROM = 'ceo@example.com'
 WELCOME_SUBJECT = 'Welcome'

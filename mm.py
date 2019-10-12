@@ -11,10 +11,13 @@ from mailman.interfaces.subscriptions import RequestRecord
 from zope.component import getUtility
 
 
+# initialize on import
+initialize()
+
+
 class ListManager:
     """Helper class to manage a mailman3 mailinglist."""
     def __init__(self, mailinglist):
-        initialize()
         self.list = getUtility(IListManager).get(mailinglist)
 
     @transactional
