@@ -19,7 +19,7 @@ import config
 
 def main():
     """Sync users."""
-    Member = namedtuple("Member", ["email", "name", "uid_number"])
+    Member = namedtuple("Member", ["name", "email", "uid_number"])
 
     ldap_addrs = []
     ldap_lookup = {}
