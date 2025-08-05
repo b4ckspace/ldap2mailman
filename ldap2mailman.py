@@ -25,7 +25,6 @@ def main():
     ldap_lookup = {}
     ldap_server = ldap3.Server(config.LDAP_URI)
     with ldap3.Connection(ldap_server, *config.LDAP_AUTH) as conn:
-        conn.start_tls()
         conn.search(config.LDAP_SEARCH, search_filter=config.LDAP_SEARCH_FILTER,
                     attributes=[config.LDAP_UIDNUMBER_ATTR, config.LDAP_MAIL_ATTR,
                                 config.LDAP_ALTMAIL_ATTR, config.LDAP_NAME_ATTR])
