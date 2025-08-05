@@ -41,6 +41,8 @@ def main():
     list_manager = mm.ListManager(config.MLIST)
     mm3_addrs = list_manager.members
 
+    ldap_addrs.remove("rechnungen@hackerspace-bamberg.de")
+
     for email in (email for email in ldap_addrs if email not in mm3_addrs):
         member = ldap_lookup[email]
         with smtplib.SMTP(config.MAIL_SERVER) as s:  # pylint: disable=invalid-name
