@@ -54,7 +54,7 @@ def main():
             msg['Bcc'] = Member.altmail
             msg['From'] = config.WELCOME_FROM
             msg['Subject'] = config.WELCOME_SUBJECT
-            s.send_message(msg)
+            s.send_message(msg, to_addrs=[config.WELCOME_TO])
         list_manager.add(member.email)
 
     for email in (email for email in mm3_addrs if email not in ldap_addrs):
